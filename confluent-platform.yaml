@@ -1,12 +1,12 @@
 ---
 apiVersion: platform.confluent.io/v1beta1
 kind: Zookeeper
+platform: linux/amd64
 metadata:
   name: zookeeper
   namespace: confluent
 spec:
   replicas: 1
-  platform: linux/amd64
   image:
     application: confluentinc/cp-zookeeper:7.1.0
     init: confluentinc/confluent-init-container:2.3.0
@@ -15,12 +15,12 @@ spec:
 ---
 apiVersion: platform.confluent.io/v1beta1
 kind: Kafka
+platform: linux/amd64
 metadata:
   name: kafka
   namespace: confluent
 spec:
   replicas: 1
-  platform: linux/amd64
   image:
     application: confluentinc/cp-server:7.1.0
     init: confluentinc/confluent-init-container:2.3.0
@@ -30,12 +30,12 @@ spec:
 ---
 apiVersion: platform.confluent.io/v1beta1
 kind: Connect
+platform: linux/amd64
 metadata:
   name: connect
   namespace: confluent
 spec:
   replicas: 1
-  platform: linux/amd64
   image:
     application: confluentinc/cp-server-connect:7.1.0
     init: confluentinc/confluent-init-container:2.3.0
@@ -45,12 +45,12 @@ spec:
 ---
 apiVersion: platform.confluent.io/v1beta1
 kind: KsqlDB
+platform: linux/amd64
 metadata:
   name: ksqldb
   namespace: confluent
 spec:
   replicas: 1
-  platform: linux/amd64
   image:
     application: confluentinc/cp-ksqldb-server:7.1.0
     init: confluentinc/confluent-init-container:2.3.0
@@ -58,12 +58,12 @@ spec:
 ---
 apiVersion: platform.confluent.io/v1beta1
 kind: ControlCenter
+platform: linux/amd64
 metadata:
   name: controlcenter
   namespace: confluent
 spec:
   replicas: 1
-  platform: linux/amd64
   image:
     application: confluentinc/cp-enterprise-control-center:7.1.0
     init: confluentinc/confluent-init-container:2.3.0
@@ -80,24 +80,24 @@ spec:
 ---
 apiVersion: platform.confluent.io/v1beta1
 kind: SchemaRegistry
+platform: linux/amd64
 metadata:
   name: schemaregistry
   namespace: confluent
 spec:
   replicas: 1
-  platform: linux/amd64
   image:
     application: confluentinc/cp-schema-registry:7.1.0
     init: confluentinc/confluent-init-container:2.3.0
 ---
 apiVersion: platform.confluent.io/v1beta1
 kind: KafkaRestProxy
+platform: linux/amd64
 metadata:
   name: kafkarestproxy
   namespace: confluent
 spec:
   replicas: 1
-  platform: linux/amd64
   image:
     application: confluentinc/cp-kafka-rest:7.1.0
     init: confluentinc/confluent-init-container:2.3.0
