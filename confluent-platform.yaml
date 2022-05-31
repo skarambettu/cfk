@@ -5,7 +5,7 @@ metadata:
   name: zookeeper
   namespace: confluent
 spec:
-  replicas: 1
+  replicas: 3
   image:
     application: confluentinc/cp-zookeeper:7.1.0
     init: confluentinc/confluent-init-container:2.3.0
@@ -18,7 +18,7 @@ metadata:
   name: kafka
   namespace: confluent
 spec:
-  replicas: 1
+  replicas: 3
   image:
     application: confluentinc/cp-server:7.1.0
     init: confluentinc/confluent-init-container:2.3.0
@@ -79,7 +79,7 @@ metadata:
   name: schemaregistry
   namespace: confluent
 spec:
-  replicas: 1
+  replicas: 3
   image:
     application: confluentinc/cp-schema-registry:7.1.0
     init: confluentinc/confluent-init-container:2.3.0
